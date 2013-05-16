@@ -113,6 +113,8 @@
 }
 
 
+/* display Date Selected Date. */
+
 -(void) dateSeletedAction : (id) sender {
     _selectedDateString = _datePicker.date.description;
 }
@@ -124,6 +126,7 @@
       datePickerTemp.datePickerMode = UIDatePickerModeDate;
     return datePickerTemp;
 }
+
 /* Present Date Picker with Blocks */
 
 
