@@ -3,10 +3,12 @@
 //  CustomDatePicker
 //
 //  Created by Karthikeyan on 16/05/13.
-//  Copyright (c) 2013 Sol Studios. All rights reserved.
+//  Copyright (c) 2013 . All rights reserved.
 //
 
 #import "ViewController.h"
+#import "KModalDatePicker.h"
+
 
 @interface ViewController ()
 
@@ -24,6 +26,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)clickmeAction:(id)sender {
+    KModalDatePicker *modelDatePicker = [[KModalDatePicker alloc] init];
+    [modelDatePicker presentWithDatePicker:self.view withBlock:^(BOOL success, NSString *selectedDate) {
+        NSLog(@"selected date Value : %@",selectedDate);
+    }];
+    
 }
 
 @end
