@@ -29,9 +29,12 @@
 }
 
 - (IBAction)clickmeAction:(id)sender {
+    /// Initialize CUstom Date Picker here.
     KModalDatePicker *modelDatePicker = [[KModalDatePicker alloc] init];
     [modelDatePicker presentWithDatePicker:self.view withBlock:^(BOOL success, NSString *selectedDate) {
-        NSLog(@"selected date Value : %@",selectedDate);
+        if (success) {
+            NSLog(@"selected date Value : %@",selectedDate);
+        }
     }];
     
 }
